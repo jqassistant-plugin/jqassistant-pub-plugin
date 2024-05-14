@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "nodes/Node - Pub Dependency Path.md",
+                "file": "nodes/Node - Pub Package.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,7 +67,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -133,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "nodes/Node - Pub Package.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "nodes/Node - Pub Package.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "nodes/Node - Pub Package.md"
               }
             }
           }
@@ -194,17 +195,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "90ebfac131ac4a2e",
+  "active": "ede8f4e120aef540",
   "lastOpenFiles": [
+    "nodes/Node - Pub Dependency Path.md",
+    "index.md",
     "nodes/Node - Pub IgnoredAdvisory.md~",
     "nodes/Node - Pub Funding.md~",
     "templates/Template - Node.md~",
     "nodes/Node - Pub IgnoredAdvisory.md",
-    "nodes/Node - Pub Dependency Path.md",
     "nodes/Node - Pub Screenshot.md",
     "nodes/Node - Pub Topic.md",
     "Untitled.md",
-    "index.md",
     "nodes/Node - Pub FalseSecret.md",
     "nodes/Node - Pub Funding.md",
     "nodes/Node - Pub Platform.md",

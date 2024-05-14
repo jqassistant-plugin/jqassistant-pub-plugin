@@ -18,6 +18,54 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ede8f4e120aef540",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "nodes/Node - Pub Dependency Path.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "979cc56326178505",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "nodes/Node - Pub Screenshot.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2be3a44068a3a32b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "nodes/Node - Pub Topic.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0ee7de1c5d332f53",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "nodes/Node - Pub IgnoredAdvisory.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -148,8 +196,27 @@
   },
   "active": "90ebfac131ac4a2e",
   "lastOpenFiles": [
-    "nodes/Node - Pub Environment.md",
+    "nodes/Node - Pub IgnoredAdvisory.md~",
+    "nodes/Node - Pub Funding.md~",
+    "templates/Template - Node.md~",
+    "nodes/Node - Pub IgnoredAdvisory.md",
+    "nodes/Node - Pub Dependency Path.md",
+    "nodes/Node - Pub Screenshot.md",
+    "nodes/Node - Pub Topic.md",
+    "Untitled.md",
     "index.md",
+    "nodes/Node - Pub FalseSecret.md",
+    "nodes/Node - Pub Funding.md",
+    "nodes/Node - Pub Platform.md",
+    "nodes/Node - Pub Executable.md",
+    "nodes/Node - Pub Dependency Git.md",
+    "nodes/Node - Pub Dependency.md",
+    "nodes/Node - Pub Dependency SDK.md",
+    "nodes/Node - Pub Dependency Hosted.md",
+    "templates/Template - Node.md",
+    "nodes/Node - Pub Package.md",
+    "nodes/Node - Pub Environment.md",
+    "templates",
     "nodes"
   ]
 }

@@ -5,6 +5,8 @@ It provides a scanner for `pubspec.yaml` files.
 
 For more information on jQAssistant see https://jqassistant.org[^].
 
+*See also:* https://jqassistant-plugin.github.io/jqassistant-pub-plugin/[Plugin Documentation]
+
 == Usage
 
 Add the plugin to the plugins section of the `jqassistant.yml` configuration file:

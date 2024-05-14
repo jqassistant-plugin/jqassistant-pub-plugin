@@ -1,0 +1,94 @@
+name: full-package
+version: 1.0.0
+description: >-
+  This is a longer description.
+  It spans multiple lines.
+environment:
+  sdk: '^3.0.0'
+
+homepage: https://example.com/home
+repository: https://example.com/repo
+issue_tracker: https://example.com/issues
+documentation: https://example.com/docs
+
+dependencies:
+  my_simple_dependency: 1.0.0
+  my_simple_dependency2:
+    version: 1.1.0
+  my_sdk_dependency:
+    sdk: flutter
+  my_hosted_dependency:
+    hosted: https://some-package-server.com
+    version: 1.0.0
+  my_git_dependency:
+    git:
+      url: git@github.com:user/myrepo.git
+      ref: some-branch
+      path: path/to/package
+  my_path_dependency:
+    path: path/to/dependency
+
+dev_dependencies:
+  my_simple_dev_dependency: 1.0.0
+  my_simple_dev_dependency2:
+    version: 1.1.0
+  my_sdk_dev_dependency:
+    sdk: flutter
+  my_hosted_dev_dependency:
+    hosted: https://some-package-server.com
+    version: 1.0.0
+  my_git_dev_dependency:
+    git:
+      url: git@github.com:user/myrepo.git
+      ref: some-branch
+      path: path/to/dev_package
+  my_path_dev_dependency:
+    path: path/to/dev_dependency
+
+dependency_overrides:
+  my_simple_dependency: 2.0.0
+  my_simple_dependency2:
+    version: 2.2.0
+  my_sdk_dependency:
+    sdk: other-sdk
+  my_hosted_dependency:
+    hosted: https://some-other-package-server.com
+    version: 2.0.0
+  my_git_dependency:
+    git:
+      url: git@github.com:user/myotherrepo.git
+      ref: some-branch
+      path: path/to/package
+  my_path_dependency:
+    path: some/other/path
+
+executables:
+  script1: main
+  my-script:
+
+platforms:
+  linux:
+  android:
+
+publish_to: none
+
+funding:
+  - https://www.buymeacoffee.com/example_user
+  - https://www.patreon.com/some-account
+
+false_secrets:
+  - /lib/src/hardcoded_api_key.dart
+  - /test/localhost_certificates/*.pem
+
+screenshots:
+  - description: 'This screenshot shows the transformation of a number of bytes to a human-readable expression.'
+    path: path/to/image/in/package/500x500.webp
+  - description: 'This screenshot shows a stack trace returning a human-readable representation.'
+    path: path/to/image/in/package.png
+
+topics:
+  - network
+  - http
+
+ignored_advisories:
+  - GHSA-4rgh-jx4f-qfcq

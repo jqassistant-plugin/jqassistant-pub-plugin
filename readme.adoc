@@ -1,0 +1,250 @@
+= jQAssistant pub Plugin
+
+This is the pub Plugin of https://jqassistant.org[jQAssistant].
+It provides a scanner for `pubspec.yaml` files.
+
+For more information on jQAssistant see https://jqassistant.org[^].
+
+== Usage
+
+Add the plugin to the plugins section of the `jqassistant.yml` configuration file:
+
+[source,yaml]
+----
+jqassistant:
+  plugins:
+    # Includes the jQAssistant pub plugin
+    - group-id: org.jqassistant.plugin
+      artifact-id: jqassistant-pub-plugin
+      version: 1.0.0-SNAPSHOT
+  scan:
+    include:
+      files:
+        - ${project.basedir}/pubspec.yaml
+----
+
+== Reference Documentation
+
+=== Scanner for `pubspec.yaml` files
+
+The plugin provides a scanner which accepts files with the name `pubspec.yaml` and creates the structure as described in this section, using the items defined in the https://dart.dev/tools/pub/pubspec[Dart Docs] and having nodes labeled with `:Pub:Package:Yaml:File` as entry point.
+
+==== Overview
+
+The scanner creates nodes with the following labels:
+
+* <<:Pub:Package:Yaml:File>>
+** <<:Pub:Environment>>
+** <<:Pub:Dependency>>
+*** <<:Pub:Dependency:Hosted>>
+*** <<:Pub:Dependency:SDK>>
+*** <<:Pub:Dependency:Git>>
+*** <<:Pub:Dependency:Path>>
+** <<:Pub:Executable>>
+** <<:Pub:Platform>>
+** <<:Pub:Funding>>
+** <<:Pub:FalseSecret>>
+** <<:Pub:Screenshot>>
+** <<:Pub:Topic>>
+** <<:Pub:IgnoredAdvisory>>
+
+[[:Pub:Package:Yaml:File]]
+==== :Pub:Package:Yaml:File
+
+Represents a `pubspec.yaml` file.
+
+[options=header]
+.Properties of :Pub:Package:Yaml:File
+|===
+| Name           | Description
+| fileName       | The file name, relative to the scanned directory.
+| name           | The name of the package.
+| version        | The version of the package.
+| description    | The description of the package.
+| homepage       | URL pointing to the website of the package
+| repository     | URL pointing to the package's source code repository
+| issueTracker   | URL pointing to the package's issue tracker site
+| documentation  | URL pointing to the documentation site of the package if it is different from homepage
+| publishTo      | "none" for no publishing or specifying an alternative pub server
+|===
+
+[options=header]
+.Relations of :Pub:Package:Yaml:File
+|===
+| Name                     | Target label(s)           | Cardinality | Description
+| HAS_ENVIRONMENT          | <<:Pub:Environment>>      | 0..*        | versions of Dart (and Flutter) to be used by the package
+| HAS_DEPENDENCY           | <<:Pub:Dependency>>       | 0..*        | immediate dependencies used by the package
+| HAS_DEV_DEPENDENCY       | <<:Pub:Dependency>>       | 0..*        | dev-dependencies used by the package
+| HAS_DEPENDENCY_OVERRIDE  | <<:Pub:Dependency>>       | 0..*        | overrides for dependencies of the package
+| HAS_EXECUTABLE           | <<:Pub:Executable>>       | 0..*        | scripts of the package to be run on the command line
+| SUPPORTS_PLATFORM        | <<:Pub:Platform>>         | 0..*        | platforms that are supported by the package
+| FUNDED_THROUGH           | <<:Pub:Funding>>          | 0..*        | URLs to provide information about how to help fund the package
+| HAS_FALSE_SECRET         | <<:Pub:FalseSecret>>      | 0..*        | ignored file paths when checking for potential security leaks before publishing
+| HAS_SCREENSHOT           | <<:Pub:Screenshot>>       | 0..*        | screenshots to be shown on the publishing site
+| HAS_TOPIC                | <<:Pub:Topic>>            | 0..*        | topic names to categorize the package
+| HAS_IGNORED_ADVISORY     | <<:Pub:IgnoredAdvisory>>  | 0..*        | suppressed security advisories from dependency resolution
+|===
+
+[[:Pub:Environment]]
+==== :Pub:Environment
+
+Defines versions of Dart (and Flutter) to be used by the package.
+
+[options=header]
+.Properties of :Pub:Environment
+|===
+| Name    | Description
+| name    | name of the environment (either `sdk` or `flutter`)
+| version | version of the environment
+|===
+
+[[:Pub:Dependency]]
+==== :Pub:Dependency
+
+Represents a dependency used by the package.
+
+[options=header]
+.Properties of :Pub:Dependency
+|===
+| Name   | Description
+| name   | name of the package the project is depending on.
+|===
+
+*Has 4 Sub-Types:*
+
+[[:Pub:Dependency:Hosted]]
+===== :Pub:Dependency:Hosted
+
+Represents a hosted dependency used by the package.
+
+[options=header]
+.Additional Properties of :Pub:Dependency:Hosted
+|===
+| Name    | Description
+| version | version of the package the project is depending on.
+| host    | hosting server of the package the project is depending on (defaults to `https://pub.dev`).
+|===
+
+[[:Pub:Dependency:SDK]]
+===== :Pub:Dependency:SDK
+
+Represents an SDK dependency used by the package.
+
+[options=header]
+.Additional Properties of :Pub:Dependency:SDK
+|===
+| Name    | Description
+| sdk     | name of the SDK of the package the project is depending on.
+|===
+
+[[:Pub:Dependency:Git]]
+===== :Pub:Dependency:Git
+
+Represents a Git dependency used by the package.
+
+[options=header]
+.Additional Properties of :Pub:Dependency:Git
+|===
+| Name    | Description
+| url     | URL of the Git repository of the package the project is depending on.
+| ref     | branch or tag name
+| path    | path of the dependency package inside the repository
+|===
+
+[[:Pub:Dependency:Path]]
+===== :Pub:Dependency:Path
+
+Represents a Path dependency used by the package.
+
+[options=header]
+.Additional Properties of :Pub:Dependency:Path
+|===
+| Name    | Description
+| path    | path of the dependency package on the local file system
+|===
+
+[[:Pub:Executable]]
+==== :Pub:Executable
+
+Represents an executable package script.
+
+[options=header]
+.Properties of :Pub:Executable
+|===
+| Name       | Description
+| name       | alias name of the script.
+| path       | path of the executable script file
+|===
+
+[[:Pub:Platform]]
+==== :Pub:Platform
+
+Represents a platform supported by the package.
+
+[options=header]
+.Properties of :Pub:Platform
+|===
+| Name       | Description
+| name       | name of the supported platform
+|===
+
+[[:Pub:Funding]]
+==== :Pub:Funding
+
+Represents a URL for funding a package.
+
+[options=header]
+.Properties of :Pub:Funding
+|===
+| Name       | Description
+| url        | URL of the funding site
+|===
+
+[[:Pub:FalseSecret]]
+==== :Pub:FalseSecret
+
+Represents a pattern for ignoring certain files when checking for potential security leaks before publishing.
+
+[options=header]
+.Properties of :Pub:FalseSecret
+|===
+| Name       | Description
+| path       | path pattern for the file(s) to ignore
+|===
+
+[[:Pub:Screenshot]]
+==== :Pub:Screenshot
+
+Represents a screenshot to be shown on the publishing site of the package.
+
+[options=header]
+.Properties of :Pub:Screenshot
+|===
+| Name         | Description
+| description  | textual description of the screenshot
+| path         | path of the screenshot file
+|===
+
+[[:Pub:Topic]]
+==== :Pub:Topic
+
+Represents a topic name to categorize the package.
+
+[options=header]
+.Properties of :Pub:Topic
+|===
+| Name  | Description
+| name  | topic name
+|===
+
+[[:Pub:IgnoredAdvisory]]
+==== :Pub:IgnoredAdvisory
+
+Represents a suppressed security advisory from dependency resolution.
+
+[options=header]
+.Properties of :Pub:IgnoredAdvisory
+|===
+| Name  | Description
+| name  | identifier of the security advisory
+|===

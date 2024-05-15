@@ -22,8 +22,11 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: jqassistant-tooling/jqassistant-quartz-docs-template
-          path: docs
-          clean: false
+          path: docs/quartz
+      - name: Move quartz files to docs directory
+        run: |
+          mv docs/quartz/* .
+          mv docs/quartz/.[^.]* .
       - uses: actions/setup-node@v3
         with:
           node-version: 18.14

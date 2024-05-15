@@ -26,8 +26,8 @@ jobs:
       - name: Move quartz files to docs directory
         run: |
           shopt -s dotglob
-          mv docs/quartz/* docs/
-          mv docs/quartz/.* docs/
+          rsync -a docs/quartz/* docs/
+          rsync -a docs/quartz/.* docs/
       - uses: actions/setup-node@v3
         with:
           node-version: 18.14

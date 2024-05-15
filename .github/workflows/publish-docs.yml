@@ -25,8 +25,9 @@ jobs:
           path: docs/quartz
       - name: Move quartz files to docs directory
         run: |
-          mv docs/quartz/* .
-          mv docs/quartz/.[^.]* .
+          shopt -s dotglob
+          mv docs/quartz/* docs/
+          mv docs/quartz/.* docs/
       - uses: actions/setup-node@v3
         with:
           node-version: 18.14

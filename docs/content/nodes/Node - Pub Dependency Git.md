@@ -7,6 +7,7 @@ aliases:
 
 -> represents a Git dependency used by the package
 
+- sub-type of [[Node - Pub Dependency|:Pub:Dependency]]
 ## Properties
 
 | Name   | Description                                                           |

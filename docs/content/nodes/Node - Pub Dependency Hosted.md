@@ -6,9 +6,7 @@ aliases:
 # `:Pub:Dependency:Hosted` Node
 
 -> represents a hosted dependency used by the package
-
 - sub-type of [[Node - Pub Dependency|:Pub:Dependency]]
-
 ## Properties
 
 | Name      | Description                                                                                                   |

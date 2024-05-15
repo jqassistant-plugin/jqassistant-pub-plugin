@@ -21,6 +21,6 @@
         <class>org.jqassistant.plugin.pub.api.model.TopicDescriptor</class>
     </model>
     <scanner>
-        <class>org.jqassistant.plugin.pub.impl.PackageJsonScannerPlugin</class>
+        <class>org.jqassistant.plugin.pub.impl.PubspecYamlScannerPlugin</class>
     </scanner>
 </jqassistant-plugin>

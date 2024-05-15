@@ -9,11 +9,11 @@ import java.io.File;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class PackageJsonScannerPluginIT extends AbstractPluginIT {
+public class PubspecYamlScannerPluginIT extends AbstractPluginIT {
 
     @Test
     void minimal() {
-        File file = new File(getClassesDirectory(PackageJsonScannerPluginIT.class), "/minimal/pubspec.yaml");
+        File file = new File(getClassesDirectory(PubspecYamlScannerPluginIT.class), "/minimal/pubspec.yaml");
 
         PackageDescriptor pubspecYaml = getScanner().scan(file, "/minimal/pubspec.yaml", DefaultScope.NONE);
 
@@ -26,7 +26,7 @@ public class PackageJsonScannerPluginIT extends AbstractPluginIT {
 
     @Test
     void full() {
-        File file = new File(getClassesDirectory(PackageJsonScannerPluginIT.class), "/full/pubspec.yaml");
+        File file = new File(getClassesDirectory(PubspecYamlScannerPluginIT.class), "/full/pubspec.yaml");
 
         PackageDescriptor pubspecYaml = getScanner().scan(file, "/full/pubspec.yaml", DefaultScope.NONE);
 

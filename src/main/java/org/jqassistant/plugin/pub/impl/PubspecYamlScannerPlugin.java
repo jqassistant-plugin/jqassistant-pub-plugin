@@ -27,7 +27,7 @@ import static java.util.stream.Collectors.toList;
  * Scanner plugin for pubspec.yaml files.
  */
 @Requires(YMLFileDescriptor.class)
-public class PackageJsonScannerPlugin extends AbstractScannerPlugin<FileResource, PackageDescriptor> {
+public class PubspecYamlScannerPlugin extends AbstractScannerPlugin<FileResource, PackageDescriptor> {
 
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper(new YAMLFactory()).disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
 

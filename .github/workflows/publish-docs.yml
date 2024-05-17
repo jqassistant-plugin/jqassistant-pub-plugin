@@ -1,3 +1,4 @@
+---
 name: Publish Doc-Pages
 
 on:
@@ -12,43 +13,8 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/checkout@v4
-        with:
-          repository: jqassistant-tooling/jqassistant-quartz-docs-template
-          path: docs/quartz
-      - name: Move quartz files to docs directory
-        run: |
-          shopt -s dotglob
-          rsync -a docs/quartz/* docs/
-          rsync -a docs/quartz/.* docs/
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18.14
-      - name: Install Dependencies
-        working-directory: ./docs
-        run: npm ci
-      - name: Build Quartz
-        working-directory: ./docs
-        run: npx quartz build
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: docs/public
-
-  deploy:
-    needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+    uses: jqassistant-tooling/jqassistant-github-actions/.github/workflows/publish-docs.yml@main

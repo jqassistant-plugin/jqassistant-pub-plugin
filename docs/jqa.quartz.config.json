@@ -1,4 +1,8 @@
 {
   "baseUrl": "jqassistant-plugin.github.io/jqassistant-pub-plugin",
-  "pageTitle": "jQA pub Plugin"
+  "pageTitle": "jQA pub Plugin",
+  "footerLinks": {
+    "Maven": "https://mvnrepository.com/artifact/org.jqassistant.plugin/jqassistant-pub-plugin",
+    "Sonar": "https://sonarcloud.io/project/overview?id=org.jqassistant.plugin%3Ajqassistant-pub-plugin"
+  }
 }

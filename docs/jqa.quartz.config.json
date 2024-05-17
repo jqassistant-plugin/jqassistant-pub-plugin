@@ -3,6 +3,8 @@
   "pageTitle": "jQA pub Plugin",
   "footerLinks": {
     "Maven": "https://mvnrepository.com/artifact/org.jqassistant.plugin/jqassistant-pub-plugin",
+    "Source": "https://github.com/jqassistant-plugin/jqassistant-pub-plugin?tab=readme-ov-file",
+    "Issues": "https://github.com/jqassistant-plugin/jqassistant-pub-plugin/issues",
     "Sonar": "https://sonarcloud.io/project/overview?id=org.jqassistant.plugin%3Ajqassistant-pub-plugin"
   }
 }

@@ -9,7 +9,7 @@ aliases:
 
 ## Properties
 
-| Name    | Description                                         |
-|---------|-----------------------------------------------------|
-| name    | name of the environment (either `sdk` or `flutter`) |
-| version | version of the environment                          |
+| Name      | Description                                         |
+|-----------|-----------------------------------------------------|
+| `name`    | name of the environment (either `sdk` or `flutter`) |
+| `version` | version of the environment                          |

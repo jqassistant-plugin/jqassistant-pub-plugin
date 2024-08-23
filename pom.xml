@@ -49,7 +49,7 @@
     <properties>
         <jqa-plugin-common.version>2.4.0</jqa-plugin-common.version>
         <jqa-plugin-yaml2.version>2.4.0</jqa-plugin-yaml2.version>
-        <xo.version>2.2.8</xo.version>
+        <xo.version>2.2.9</xo.version>
         <jackson-dataformat-yaml.version>2.17.2</jackson-dataformat-yaml.version>
     </properties>
 

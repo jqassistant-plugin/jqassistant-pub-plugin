@@ -47,9 +47,8 @@
     </scm>
 
     <properties>
-        <jqa-plugin-common.version>2.4.0</jqa-plugin-common.version>
-        <jqa-plugin-yaml2.version>2.4.0</jqa-plugin-yaml2.version>
-        <xo.version>2.2.8</xo.version>
+        <jqa-plugin-common.version>${com.buschmais.jqassistant.version}</jqa-plugin-common.version>
+        <jqa-plugin-yaml2.version>${com.buschmais.jqassistant.version}</jqa-plugin-yaml2.version>
         <jackson-dataformat-yaml.version>2.17.2</jackson-dataformat-yaml.version>
     </properties>
 
@@ -101,7 +100,7 @@
         <dependency>
             <groupId>com.buschmais.xo</groupId>
             <artifactId>xo.api</artifactId>
-            <version>${xo.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.mapstruct</groupId>

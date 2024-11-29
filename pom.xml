@@ -49,7 +49,7 @@
     <properties>
         <jqa-plugin-common.version>${com.buschmais.jqassistant.version}</jqa-plugin-common.version>
         <jqa-plugin-yaml2.version>${com.buschmais.jqassistant.version}</jqa-plugin-yaml2.version>
-        <jackson-dataformat-yaml.version>2.18.1</jackson-dataformat-yaml.version>
+        <jackson-dataformat-yaml.version>2.18.2</jackson-dataformat-yaml.version>
     </properties>
 
     <build>
